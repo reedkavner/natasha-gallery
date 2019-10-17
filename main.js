@@ -37,13 +37,15 @@ function init(){
 		$label.text(name);
 
 		//create the box and add the content
-		var $box = $("<div>", {id: cid, class: "col-6 col-md-4 col-lg-3 character"});
+		var $box = $("<div>", {id: cid, class: "col-6 col-md-4 col-lg-3 box character"});
 		$box.append($img);
 		$box.append($label);
 
 		//add box to container
 		$('#gallery').append($box);
 	})
+
+	$('#gallery').append($("#credits").html())
 
 	// handle clicks on a character
 	$(".character").click(function(){

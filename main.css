@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i&display=swap');
 
 html{
 	font-size: 14px;
@@ -6,30 +6,56 @@ html{
 
 body.natasha{
 	font-family: 'Lato', sans-serif !important;
+	color: #2e2e2e;
 }
 
 
-h1{
+#hero{
+	width: 90%;
 	text-align: center;
+	margin: 2rem auto;
+
+}
+
+#nwc-title{
+	width: 100%;
+	margin-bottom: 1rem;
+}
+
+#nwc-subtitle{
+	width: 70%;
+}
+
+#explainer{
+	font-size: 1.2rem;
+	font-weight: 300;
+	justify-content: center;
+	text-align: center;
+	font-style: italic;
+	margin-bottom: 1rem;
 }
 
 #gallery{
-	border: 0px solid black;
+	margin-bottom: 3rem;
+}
+
+.box{
+	background-color: #f7f7f7;
+	border: 6px white solid;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 15rem;
+	flex-direction: column;
 }
 
 .character{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 15rem;
-		flex-direction: column;
-		border: 1px solid #e2e2e2;
 		padding-bottom: 1rem;
 		transition: background 200ms ease-in-out;
 }
 
 .character.playing{
-	background: pink;
+	background: #e4e5ff;
 }
 
 .character img{
@@ -43,4 +69,43 @@ h1{
 	text-align: center;
 	bottom: 1rem;
     position: absolute;
+}
+
+.credit{
+	text-align: center;
+}
+
+.credit p:last-of-type{
+	margin-bottom: 0;
+}
+
+.credit a, .credit a:visited{
+	color: #868cdd;
+}
+
+.credit a:hover{
+	text-decoration: none;
+	color: #656dbc;
+}
+
+@media (min-width: 576px) {
+	html{
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 768px) {
+	html{
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 992px) {	
+	html{
+		font-size: 20px;
+	}
+}
+
+@media (min-width: 1200px) {
+
 }
