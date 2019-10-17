@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i&display=swap');
 
 html{
 	font-size: 14px;
@@ -9,11 +9,23 @@ body.natasha{
 	color: #2e2e2e;
 }
 
+#loader{
+	justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    height: 50vh;
+}
+
+#loader .spinner-grow{
+	margin-right: 1rem;
+}
+
 
 #hero{
 	width: 90%;
 	text-align: center;
 	margin: 2rem auto;
+	max-width: 700px;
 
 }
 
@@ -36,7 +48,7 @@ body.natasha{
 }
 
 #gallery{
-	margin-bottom: 3rem;
+	margin-bottom: 2rem;
 }
 
 .box{
@@ -50,6 +62,7 @@ body.natasha{
 }
 
 .character{
+		cursor: pointer;
 		padding-bottom: 1rem;
 		transition: background 200ms ease-in-out;
 }
@@ -67,7 +80,7 @@ body.natasha{
 .label{
 	width: 100%;
 	text-align: center;
-	bottom: 1rem;
+	bottom: .6rem;
     position: absolute;
 }
 
@@ -88,6 +101,16 @@ body.natasha{
 	color: #656dbc;
 }
 
+
+@media(hover: hover) and (pointer: fine) {
+    .character:hover{
+		background-color: #efefef;
+	}
+	.character.playing:hover{
+		background-color: #e4e5ff;
+	}
+}
+
 @media (min-width: 576px) {
 	html{
 		font-size: 16px;
@@ -101,9 +124,7 @@ body.natasha{
 }
 
 @media (min-width: 992px) {	
-	html{
-		font-size: 20px;
-	}
+
 }
 
 @media (min-width: 1200px) {

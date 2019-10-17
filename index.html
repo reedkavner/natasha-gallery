@@ -25,11 +25,13 @@
         <img id="nwc-subtitle" src="img/nwc-subtitle.jpg">
       </div>
     </div>
-    <div class="row" id="explainer">
+    <div class="row" id="loader">
+       <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>Loading portraits...
+    </div>
+    <div class="row after-loading" id="explainer" style="display: none;">
       Select a character to hear their story.
     </div>
-    <div class="row" id="gallery">
-     
+    <div class="row after-loading" id="gallery" style="display: none;">
     </div>
   </div>
   <div id="credits" style="display: none;">
@@ -42,7 +44,6 @@
       <p>Characters by<br><a href="http://www.natashavaynblat.com/">Natasha Vaynblat</a></p>
     </div>
   </div>
-
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="

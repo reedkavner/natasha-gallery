@@ -15,6 +15,7 @@ function init(){
 	var sounds = {};
 
 	function stopAll(){
+		var cid;
 		for (cid in sounds){
 			sounds[cid].stop();
 		}
@@ -43,13 +44,17 @@ function init(){
 
 		//add box to container
 		$('#gallery').append($box);
-	})
+	});
 
-	$('#gallery').append($("#credits").html())
+	$('#gallery').append($("#credits").html());
+
+	$("#loader").fadeOut(1000,function(){
+		$(".after-loading").fadeIn(500);
+	});
 
 	// handle clicks on a character
 	$(".character").click(function(){
-		$char = $(this);
+		var $char = $(this);
 		var cid = $char.attr('id');
 		if( $char.hasClass('playing') ){
 			sounds[cid].stop();
@@ -62,7 +67,7 @@ function init(){
 			sounds[cid].play();
 			$char.addClass('playing');
 		}
-	})
+	});
 }
 
 
