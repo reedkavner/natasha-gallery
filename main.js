@@ -25,7 +25,6 @@ function init(){
 		// load sound into sound array
 		sounds[cid] = new Howl({
       		src: ['audio/sample.m4a'],
-      		usingWebAudio: false,
       		onend: function(){
       			$('#'+cid).removeClass('playing');
       		}
