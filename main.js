@@ -1,11 +1,3 @@
-var sounds = {};
-
-function stopAll(){
-	for (cid in sounds){
-		sounds[cid].stop();
-	}
-}
-
 function init(){
 	const characters = {
 	"bernice" : "Bernice",
@@ -20,11 +12,21 @@ function init(){
 	"rick-and-junebug" : "Rick and Junebug"
 	};
 
+	var sounds = {};
+
+	function stopAll(){
+		for (cid in sounds){
+			sounds[cid].stop();
+		}
+	}
 
 	$.each(characters, function(cid, name) {
 		// load sound into sound array
 		sounds[cid] = new Howl({
-      		src: ['audio/sample.m4a']
+      		src: ['audio/sample.m4a'],
+      		onend: function(){
+      			$('#'+cid).removeClass('playing');
+      		}
     	});
 
 		//create the image
@@ -47,11 +49,11 @@ function init(){
 	$(".character").click(function(){
 		$char = $(this);
 		var cid = $char.attr('id');
-		if ($char.hasClass('playing')){
+		if( $char.hasClass('playing') ){
 			sounds[cid].stop();
 			$char.removeClass('playing');
 		}else{
-			// stop everything else
+			// stop all songs
 			stopAll();
 			$(".character").removeClass("playing");
 
