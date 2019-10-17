@@ -14,11 +14,20 @@ function init(){
 
 	var sounds = {};
 
+	var soundsLoaded = 0;
+
 	function stopAll(){
 		var cid;
 		for (cid in sounds){
 			sounds[cid].stop();
 		}
+	}
+
+	function showGallery(){
+	$('#gallery').append($("#credits").html());
+	$("#loader").fadeOut(1000,function(){
+		$(".after-loading").fadeIn(500);
+	});
 	}
 
 	$.each(characters, function(cid, name) {
@@ -27,6 +36,10 @@ function init(){
       		src: ['audio/sample.m4a'],
       		onend: function(){
       			$('#'+cid).removeClass('playing');
+      		},
+      		onload: function(){
+      			console.log(cid + " loaded");
+      			soundsLoaded ++;
       		}
     	});
 
@@ -46,12 +59,6 @@ function init(){
 		$('#gallery').append($box);
 	});
 
-	$('#gallery').append($("#credits").html());
-
-	$("#loader").fadeOut(1000,function(){
-		$(".after-loading").fadeIn(500);
-	});
-
 	// handle clicks on a character
 	$(".character").click(function(){
 		var $char = $(this);
@@ -67,6 +74,16 @@ function init(){
 			sounds[cid].play();
 			$char.addClass('playing');
 		}
+	});
+
+	//display gallery once images and sounds are loaded
+	$('#gallery').imagesLoaded( function() {
+		var loadChecker = setInterval(function(){
+			if (soundsLoaded == Object.keys(characters).length){
+				showGallery();
+				clearInterval(loadChecker);
+			}
+		}, 300);
 	});
 }
 
