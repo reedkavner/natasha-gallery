@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:itunesu="http://www.itunesu.com/feed" version="2.0">
+    <channel>
+        <link>http://www.YourSite.com</link>
+        <language>en-us</language>
+        <copyright>&#xA9;2019</copyright>
+        <image>
+            <url>https://www.natasha.gallery/img/square-300.jpg</url>
+            <title>Natasha Wears Clothes</title>
+            <link>https://www.natasha.gallery</link>
+        </image>
+        <itunes:owner>
+            <itunes:name>Natasha Vaynblat</itunes:name>
+            <itunes:email>your@email.com</itunes:email>
+        </itunes:owner>
+        <itunes:category text="Comedy"></itunes:category>
+        <itunes:keywords>Natasha Vaynblat, comedy, natasha wears clothes</itunes:keywords>
+        <itunes:explicit>no</itunes:explicit>
+        <itunes:image href="https://www.natasha.gallery/img/square-300.jpg" />
+        <atom:link href="https://www.natasha.gallery/podcast.xml" rel="self" type="application/rss+xml" />
+        <pubDate>Sat, 19 Oct 2019 1:00:00 EST</pubDate>
+        <title>Natasha Wears Clothes</title>
+        <itunes:author>Natasha Vaynblat</itunes:author>
+        <description>Listen to the monologues from Natasha Wears Clothes, a comedic gallery experience.</description>
+        <itunes:summary>Listen to the monologues from Natasha Wears Clothes, a comedic gallery experience.</itunes:summary>
+        <itunes:subtitle>Listen to the monologues from Natasha Wears Clothes, a comedic gallery experience.</itunes:subtitle>
+        <lastBuildDate>Sat, 19 Oct 2019 1:00:00 EST</lastBuildDate>
+        <item>
+            <title>Bernice</title>
+            <description>Bernice's monologue</description>
+            <itunes:summary>Bernice's monologue</itunes:summary>
+            <enclosure url="https://www.natasha.gallery/audio/bernice.mp3" type="audio/mpeg" />
+            <guid>https://www.natasha.gallery/audio/bernice.mp3</guid>
+            <pubDate>Sat, 19 Oct 2019 00:00:10 EST</pubDate>
+        </item>
+        <item>
+            <title>Bernice</title>
+            <description>Boris and Natasha's monologue</description>
+            <itunes:summary>Boris and Natasha's monologue</itunes:summary>
+            <enclosure url="https://www.natasha.gallery/audio/boris-and-natasha.mp3" type="audio/mpeg" />
+            <guid>https://www.natasha.gallery/audio/boris-and-natasha.mp3</guid>
+            <pubDate>Sat, 19 Oct 2019 00:00:09 EST</pubDate>
+        </item>
+        <item>
+            <title>Bernice</title>
+            <description>Britney and Britney's monologue</description>
+            <itunes:summary>Britney and Britney's monologue</itunes:summary>
+            <enclosure url="https://www.natasha.gallery/audio/britney.mp3" type="audio/mpeg" />
+            <guid>https://www.natasha.gallery/audio/britney.mp3</guid>
+            <pubDate>Sat, 19 Oct 2019 00:00:08 EST</pubDate>
+        </item>
+        <item>
+            <title>Bernice</title>
+            <description>Cecile's monologue</description>
+            <itunes:summary>Cecile's monologue</itunes:summary>
+            <enclosure url="https://www.natasha.gallery/audio/cecile.mp3" type="audio/mpeg" />
+            <guid>https://www.natasha.gallery/audio/cecile.mp3</guid>
+            <pubDate>Sat, 19 Oct 2019 00:00:07 EST</pubDate>
+        </item>
+        <item>
+            <title>Bernice</title>
+            <description>Daisy Lee's monologue</description>
+            <itunes:summary>Daisy Lee's monologue</itunes:summary>
+            <enclosure url="https://www.natasha.gallery/audio/daisy-lee.mp3" type="audio/mpeg" />
+            <guid>https://www.natasha.gallery/audio/daisy-lee.mp3</guid>
+            <pubDate>Sat, 19 Oct 2019 00:00:06 EST</pubDate>
+        </item>
+        <item>
+            <title>Bernice</title>
+            <description>Donna's monologue</description>
+            <itunes:summary>Donna's monologue</itunes:summary>
+            <enclosure url="https://www.natasha.gallery/audio/donna.mp3" type="audio/mpeg" />
+            <guid>https://www.natasha.gallery/audio/donna.mp3</guid>
+            <pubDate>Sat, 19 Oct 2019 00:00:05 EST</pubDate>
+        </item>
+        <item>
+            <title>Bernice</title>
+            <description>Ezmyr and Wilde's monologue</description>
+            <itunes:summary>Ezmyr and Wilde's monologue</itunes:summary>
+            <enclosure url="https://www.natasha.gallery/audio/ezmyr-and-wilde.mp3" type="audio/mpeg" />
+            <guid>https://www.natasha.gallery/audio/ezmyr-and-wilde.mp3</guid>
+            <pubDate>Sat, 19 Oct 2019 00:00:04 EST</pubDate>
+        </item>
+        <item>
+            <title>Bernice</title>
+            <description>Geraldine's monologue</description>
+            <itunes:summary>Geraldine's monologue</itunes:summary>
+            <enclosure url="https://www.natasha.gallery/audio/geraldine.mp3" type="audio/mpeg" />
+            <guid>https://www.natasha.gallery/audio/geraldine.mp3</guid>
+            <pubDate>Sat, 19 Oct 2019 00:00:03 EST</pubDate>
+        </item>
+        <item>
+            <title>Bernice</title>
+            <description>Luke and Stew's monologue</description>
+            <itunes:summary>Luke and Stew's monologue</itunes:summary>
+            <enclosure url="https://www.natasha.gallery/audio/luke-and-stew.mp3" type="audio/mpeg" />
+            <guid>https://www.natasha.gallery/audio/luke-and-stew.mp3</guid>
+            <pubDate>Sat, 19 Oct 2019 00:00:02 EST</pubDate>
+        </item>
+        <item>
+            <title>Bernice</title>
+            <description>Rick and Junebug's monologue</description>
+            <itunes:summary>Rick and Junebug's monologue</itunes:summary>
+            <enclosure url="https://www.natasha.gallery/audio/rick-and-junebug.mp3" type="audio/mpeg" />
+            <guid>https://www.natasha.gallery/audio/rick-and-junebug.mp3</guid>
+            <pubDate>Sat, 19 Oct 2019 00:00:01 EST</pubDate>
+        </item>
+    </channel>
+</rss>
