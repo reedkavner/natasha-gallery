@@ -9,6 +9,10 @@ body.natasha{
 	color: #2e2e2e;
 }
 
+audio{
+	display: none;
+}
+
 #loader{
 	justify-content: center;
     align-items: center;
@@ -39,7 +43,7 @@ body.natasha{
 }
 
 #explainer{
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 	font-weight: 300;
 	justify-content: center;
 	text-align: center;
@@ -108,6 +112,12 @@ body.natasha{
 	}
 	.character.playing:hover{
 		background-color: #e4e5ff;
+	}
+}
+
+@media (max-width: 575px) {
+	#gallery{
+		font-size: 1.1rem;
 	}
 }
 

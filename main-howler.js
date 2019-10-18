@@ -12,34 +12,36 @@ function init(){
 	"rick-and-junebug" : "Rick and Junebug"
 	};
 
+	var sounds = {};
+
 	var soundsLoaded = 0;
 
-	function showGallery(){
-		$('#gallery').append($("#credits").html());
-		$("#loader").fadeOut(1000,function(){
-			$(".after-loading").fadeIn(500);
-		});
+	function stopAll(){
+		var cid;
+		for (cid in sounds){
+			sounds[cid].stop();
+		}
 	}
 
-	function stopAll(){
-		$("audio").each(function(){
-			$(this)[0].pause();
-			$(this)[0].currentTime = 0;
-		})
+	function showGallery(){
+	$('#gallery').append($("#credits").html());
+	$("#loader").fadeOut(1000,function(){
+		$(".after-loading").fadeIn(500);
+	});
 	}
 
 	$.each(characters, function(cid, name) {
-    	//create the audio
-    	var $audio = $("<audio>", {src: "audio/sample.m4a"});
-    	console.log($audio);
-    	$audio[0].load();
-    	$audio.on('canplaythrough', function(){
-    		soundsLoaded ++;
-    		console.log(cid + " loaded");
+		// load sound into sound array
+		sounds[cid] = new Howl({
+      		src: ['audio/sample.m4a'],
+      		onend: function(){
+      			$('#'+cid).removeClass('playing');
+      		},
+      		onload: function(){
+      			console.log(cid + " loaded");
+      			soundsLoaded ++;
+      		}
     	});
-    	$audio.on('end', function(){
-    		this.parent.removeClass('playing');
-    	})
 
 		//create the image
 		var $img = $("<img>", {src: "img/thumbs/" + cid +".jpg"});
@@ -52,7 +54,6 @@ function init(){
 		var $box = $("<div>", {id: cid, class: "col-6 col-md-4 col-lg-3 box character"});
 		$box.append($img);
 		$box.append($label);
-		$box.append($audio);
 
 		//add box to container
 		$('#gallery').append($box);
@@ -62,14 +63,15 @@ function init(){
 	$(".character").click(function(){
 		var $char = $(this);
 		var cid = $char.attr('id');
-		stopAll();
-
 		if( $char.hasClass('playing') ){
+			sounds[cid].stop();
 			$char.removeClass('playing');
 		}else{
+			// stop all songs
+			stopAll();
 			$(".character").removeClass("playing");
 
-			$char.children("audio")[0].play();
+			sounds[cid].play();
 			$char.addClass('playing');
 		}
 	});
