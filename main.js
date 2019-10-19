@@ -37,7 +37,7 @@ function init(){
 
 	$.each(characters, function(cid, name) {
     	//create the audio
-    	var $audio = $("<audio>", {src: "audio/sample.m4a"});
+    	var $audio = $("<audio>", {src: "audio/" + cid + ".m4a"});
     	$audio[0].load();
     	$audio.on('canplaythrough', function(){
     		newSoundLoaded(cid);
