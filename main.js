@@ -39,11 +39,12 @@ function init(){
     	//create the audio
     	var $audio = $("<audio>", {src: "audio/" + cid + ".m4a"});
     	$audio[0].load();
+    	console.log('loading '+cid)
     	$audio.on('canplaythrough', function(){
     		newSoundLoaded(cid);
     	});
-    	$audio.on('end', function(){
-    		this.parent.removeClass('playing');
+    	$audio.on('ended', function(){
+    		$(this).parent().removeClass('playing');
     	});
 
 		//create the image
