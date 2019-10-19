@@ -27,19 +27,31 @@ function init(){
 	}
 
 	var soundsLoaded = 0;
-	var allLoaded = false;
+	var allLoaded;
+	if (navigator.userAgent.indexOf("Firefox") === -1){
+		allLoaded = false;
+	}else{
+		// terrible hack to make firefox work
+		allLoaded = true;
+	}
+	console.log(allLoaded);
+
 	function newSoundLoaded(cid){
-		if (allLoaded == false){
+		if (allLoaded === false){
 			soundsLoaded += 1;
     		console.log(cid + " loaded");
+    		if (soundsLoaded === Object.keys(characters).length){
+    			allLoaded = true;
+    		}
 		}
 	}
 
 	$.each(characters, function(cid, name) {
     	//create the audio
-    	var $audio = $("<audio>", {src: "audio/" + cid + ".m4a"});
-    	$audio[0].load();
-    	console.log('loading '+cid)
+    	var $audio = $("<audio>");
+    	$audio.append($("<source>", {type: "audio/webm", src: "audio/" + cid + ".webm"}));
+    	$audio.append($("<source>", {type: "audio/m4a", src: "audio/" + cid + ".m4a"}));
+    	$audio.append($("<source>", {type: "audio/mp3", src: "audio/" + cid + ".mp3"}));
     	$audio.on('canplaythrough', function(){
     		newSoundLoaded(cid);
     	});
@@ -62,6 +74,8 @@ function init(){
 
 		//add box to container
 		$('#gallery').append($box);
+		console.log('loading ' + cid);
+		$audio[0].load();
 	});
 
 	// handle clicks on a character
@@ -83,10 +97,9 @@ function init(){
 	//display gallery once images and sounds are loaded
 	$('#gallery').imagesLoaded( function() {
 		var loadChecker = setInterval(function(){
-			if (soundsLoaded === Object.keys(characters).length){
+			if (allLoaded === true){
 				showGallery();
 				clearInterval(loadChecker);
-				allLoaded = true;
 			}
 		}, 300);
 	});
