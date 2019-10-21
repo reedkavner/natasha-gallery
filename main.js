@@ -1,15 +1,15 @@
 function init(){
 	const characters = {
 	"bernice" : "Bernice",
-	"boris-and-natasha" : "Boris and Natasha",
-	"britney-and-britney" : "Britney and Britney",
-	"cecile" : "Cecile",
-	"daisy-lee" : "Daisy Lee",
 	"donna" : "Donna",
 	"ezmyr-and-wilde" : "Ezmyr and Wilde",
-	"geraldine" : "Geraldine",
+	"daisy-lee" : "Daisy Lee",
 	"luke-and-stew" : "Luke and Stew",
-	"rick-and-junebug" : "Rick and Junebug"
+	"britney-and-britney" : "Britney and Britney",
+	"geraldine" : "Geraldine",
+	"rick-and-junebug" : "Rick and Junebug",
+	"cecile" : "Cecile",
+	"boris-and-natasha" : "Boris and Natasha"
 	};
 
 	function showGallery(){
