@@ -89,11 +89,10 @@ function init(){
 		
 		$.featherlight("img/big/" +cid+".jpg", {
 			beforeClose: stopAll,
-			afterContent: function(){
-				$char.children("audio")[0].play();
-				$char.addClass('playing');
-			}
 		});
+
+		$char.children("audio")[0].play();
+		$char.addClass('playing');
 
 		gtag('event', "click", {
   		'event_category': "character photo",
