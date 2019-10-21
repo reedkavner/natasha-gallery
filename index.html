@@ -19,6 +19,17 @@
   <!-- styles -->
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150495697-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-150495697-1');
+  </script>
 
   <!-- FB OG  -->
   <meta property="og:title" content="Natasha Wears Clothes">
@@ -43,13 +54,13 @@
         <img id="nwc-subtitle" src="img/nwc-subtitle.jpg" alt="A Comedic Gallery Expereince" title="A Comedic Gallery Expereince">
       </div>
     </div>
-    <div class="row" id="loader">
-       <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>Loading portraits...
-    </div>
-    <div class="row after-loading" id="explainer" style="display: none;">
-      Select a character to hear their story.
+    <div class="row" id="explainer">
+      <em>Artist Statment: </em>Natasha Wears Clothes is a comedic gallery experience. It’s a one-woman sketch comedy show in the form of an online photo gallery. Tour the online gallery while listening to each character's original monologue.
     </div>
     <div class="row after-loading" id="gallery" style="display: none;">
+    </div>
+    <div class="row" id="loader">
+       <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>Loading portraits...
     </div>
   </div>
   <div id="credits" style="display: none;">
@@ -66,7 +77,8 @@
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" src="main.js"></script>
 </body>
 </html>

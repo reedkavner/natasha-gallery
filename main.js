@@ -21,6 +21,7 @@ function init(){
 
 	function stopAll(){
 		$("audio").each(function(){
+			$(".character").removeClass("playing");
 			$(this)[0].pause();
 			$(this)[0].currentTime = 0;
 		});
@@ -67,7 +68,9 @@ function init(){
 		$label.text(name);
 
 		//create the box and add the content
-		var $box = $("<div>", {id: cid, class: "col-6 col-md-4 col-lg-3 box character"});
+		var $box = $("<div>", {
+			id: cid, 
+			class: "col-6 col-md-4 col-lg-3 box character"});
 		$box.append($img);
 		$box.append($label);
 		$box.append($audio);
@@ -83,15 +86,21 @@ function init(){
 		var $char = $(this);
 		var cid = $char.attr('id');
 		stopAll();
+		
+		$.featherlight("img/big/" +cid+".jpg", {
+			beforeClose: stopAll,
+			afterContent: function(){
+				$char.children("audio")[0].play();
+				$char.addClass('playing');
+			}
+		});
 
-		if( $char.hasClass('playing') ){
-			$char.removeClass('playing');
-		}else{
-			$(".character").removeClass("playing");
+		gtag('event', "click", {
+  		'event_category': "character photo",
+  		'event_label': cid
+		});
 
-			$char.children("audio")[0].play();
-			$char.addClass('playing');
-		}
+
 	});
 
 	//display gallery once images and sounds are loaded

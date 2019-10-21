@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,300i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,&display=swap');
 
 html{
 	font-size: 14px;
@@ -8,6 +8,10 @@ body.natasha{
 	font-family: 'Lato', sans-serif !important;
 	color: #2e2e2e;
 	font-weight: 300;
+}
+
+strong{
+	font-weight: 400;
 }
 
 audio{
@@ -44,12 +48,10 @@ audio{
 }
 
 #explainer{
-	font-size: 1.3rem;
+	display: block;
 	font-weight: 300;
-	justify-content: center;
-	text-align: center;
-	font-style: italic;
 	margin-bottom: 1rem;
+	padding: 0 21px;
 }
 
 #gallery{
@@ -73,7 +75,7 @@ audio{
 }
 
 .character.playing{
-	background: #e4e5ff;
+	/* background: #e4e5ff; */
 }
 
 .character img{
@@ -104,6 +106,15 @@ audio{
 .credit a:hover{
 	text-decoration: none;
 	color: #656dbc;
+}
+
+.featherlight-content{
+	background:  #f7f7f7 !important;
+}
+
+.featherlight .featherlight-close-icon{
+	line-height: 27px !important;
+	width: 27px !important;
 }
 
 
